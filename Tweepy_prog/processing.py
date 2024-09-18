@@ -15,7 +15,7 @@ def plot_tweet_frequency(df):
 
 def generate_report(df):
     report = {
-        'Total Tweets': len(df),
+        'Total Tweet': len(df),
         'Most Frequent User': df['user'].value_counts().idxmax(),
         'Most Frequent Words': pd.Series(' '.join(df['text']).split()).value_counts().head(10)
     }
